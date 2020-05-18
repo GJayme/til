@@ -17,6 +17,12 @@ def list_user_pets(request):
     pet = Pet.objects.filter(active=True, user=request.user)
     return render(request,'list.html', {'pet': pet})
 
+#Detail Pet
+def pet_detail(request, id):
+    pet = Pet.objects.get(active=True, id=id)
+    return render(request, 'pet.html', {'pet': pet})
+
+
 #Login Page
 def login_user(request):
     return render(request, 'login.html')
