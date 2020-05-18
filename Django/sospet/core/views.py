@@ -12,6 +12,10 @@ def list_all_pets(request):
     pet = Pet.objects.filter(active=True)
     return render(request, 'list.html', {'pet': pet})
 
+#List User Pets
+def list_user_pets(request):
+    pet = Pet.objects.filter(active=True, user=request.user)
+    return render(request,'list.html', {'pet': pet})
 
 #Login Page
 def login_user(request):
