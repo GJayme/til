@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Django 3.0!</title>
+</head>
+
+<body>
+  <h3>Curso de Django 3.0! </h3>
+  <form method="POST" action="/">
+    {% csrf_token %}
+    {{form.title}}
+    <input type="submit" value="Cadastrar">
+  </form>
+
+  {% for App in App %}
+  <div>
+    <a href="{% url 'update_app' App.id %}">Atualizar dados</a>
+    <a href="{% url 'delete' App.id %}">Deletar</a>
+
+    {% if App.complete == True %}
+    <strike>
+      <p>{{App}}</p>
+    </strike>
+    {% else %}
+    <p>{{App}}</p>
+    {% endif %}
+
+  </div>
+  {% endfor %}
+</body>
+
+</html>
