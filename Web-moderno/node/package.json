@@ -1,0 +1,16 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "moduloA.js",
+  "scripts": {
+    "start": "nodemon usandoModulosTerceiros"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "nodemon": "^2.0.4"
+  }
+}
