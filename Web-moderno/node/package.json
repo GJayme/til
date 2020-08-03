@@ -4,7 +4,7 @@
   "description": "",
   "main": "moduloA.js",
   "scripts": {
-    "start": "nodemon usandoModulosTerceiros"
+    "start": "nodemon"
   },
   "keywords": [],
   "author": "",
