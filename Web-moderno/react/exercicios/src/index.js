@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Multi, { BoaNoite}  from './components/Multiplos'
+import Saudacao from './components/Saudacao'
 
 ReactDOM.render(
   <div>
-    <Multi.BoaTarde nome="Bia" />
-    <BoaNoite nome="Ana" />
+    <Saudacao tipo="Bom dia" nome="João" />
   </div>
   , document.getElementById('root'))
 
