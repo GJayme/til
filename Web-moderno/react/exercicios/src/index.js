@@ -1,9 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import BomDia from './components/BomDia'
+import Multi, { BoaNoite}  from './components/Multiplos'
 
-ReactDOM.render(<BomDia nome="Gabriel" />, document.getElementById('root'))
+ReactDOM.render(
+  <div>
+    <Multi.BoaTarde nome="Bia" />
+    <BoaNoite nome="Ana" />
+  </div>
+  , document.getElementById('root'))
 
 // Criando elemento com JQuery: $('<h1>').html('React 2')
 // JSX é a um JS estendido com HTML
