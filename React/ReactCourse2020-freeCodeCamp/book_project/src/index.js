@@ -6,27 +6,39 @@ import './index.css';
 //Setup vars
 const books = [
   {
+    id: 1,
     author: 'Neil Gaiman',
     title: 'Absolute Sandman - Vol.1',
     img:
       'https://m.media-amazon.com/images/I/61xQCxJ1SqL._AC_UY218_.jpghttps://m.media-amazon.com/images/I/61xQCxJ1SqL._AC_UY218_.jpg',
   },
   {
+    id: 2,
     author: 'Doug Moench e Kelley Jones',
     title: 'Batman, Vol.1',
     img: 'https://m.media-amazon.com/images/I/819ZMpwTNOL._AC_UY218_.jpg',
   },
+  {
+    id: 3,
+    author: 'C.S.Lewis',
+    title: 'As Crônicas de Nárnia. Brochura',
+    img:
+      'https://images-na.ssl-images-amazon.com/images/I/71yJLhQekBL._AC_UL200_SR200,200_.jpg',
+  },
 ];
 
-const names = ['john', 'peter', 'susan'];
-const newNames = names.map((name) => <h1>{name}</h1>);
-
 function BookList() {
-  return <section className="booklist">{newNames}</section>;
+  return (
+    <section className="booklist">
+      {books.map((book) => {
+        return <Book key={book.id} {...book}></Book>;
+      })}
+    </section>
+  );
 }
 
-const Book = (props) => {
-  const { img, title, author } = props;
+const Book = ({ img, title, author }) => {
+  // const { img, title, author } = props;
 
   return (
     <article className="book">
